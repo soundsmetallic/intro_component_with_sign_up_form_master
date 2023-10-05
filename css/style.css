@@ -1,0 +1,204 @@
+body {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+}
+footer p {
+  margin: 0;
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+  background: center/cover no-repeat url(../images/bg-intro-desktop.png), hsl(0, 100%, 74%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sign-up-card {
+  display: flex;
+  width: 76.5%;
+  min-width: 375px;
+}
+.sign-up-card div {
+  flex: 1;
+}
+
+h1, p {
+  color: white;
+}
+
+h1 {
+  font-size: 3rem;
+  line-height: 3.5rem;
+  width: 460px;
+  margin-top: -1rem;
+}
+
+.left-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 540px;
+}
+
+.left-side p {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+
+.promo {
+  width: 540px;
+  height: 60px;
+  background: hsl(248, 32%, 49%);
+  border-radius: 10px;
+  box-shadow: 0 10px 5px rgba(62, 60, 73, 0.25);
+  display: flex;
+  justify-content: center;
+}
+.promo span {
+  font-weight: 600;
+}
+
+.sign-up-form {
+  width: 540px;
+  background: white;
+  border-radius: 10px;
+  padding: 40px;
+  box-sizing: border-box;
+  margin-top: 1.5rem;
+  box-shadow: 0 10px 5px rgba(62, 60, 73, 0.25);
+}
+
+input, button {
+  height: 54px;
+  width: 460px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+input {
+  padding-left: 32px;
+  border: 1px solid hsl(246, 25%, 77%);
+  font-size: 0.8rem;
+}
+
+p.error-message {
+  color: hsl(0, 100%, 74%);
+  text-align: right;
+  font-size: 0.7rem;
+}
+
+form > * {
+  position: relative;
+}
+
+input {
+  position: relative;
+  z-index: 1;
+}
+
+#error-icon {
+  position: absolute;
+  right: 25px;
+  top: 15px;
+  z-index: 2;
+  display: none;
+}
+
+.error {
+  outline: 2px solid hsl(0, 100%, 74%);
+  color: hsl(0, 100%, 74%);
+}
+
+button {
+  background: hsl(154, 59%, 51%);
+  border: none;
+  color: white;
+  text-transform: uppercase;
+}
+button:hover {
+  cursor: pointer;
+  background: rgba(56, 204, 140, 0.5);
+}
+
+form div {
+  margin-bottom: 1.25rem;
+}
+
+p.terms {
+  color: hsl(246, 25%, 77%);
+  font-size: 0.7rem;
+  text-align: center;
+  margin-top: 1.25rem;
+}
+p.terms span {
+  color: hsl(0, 100%, 74%);
+  font-weight: 600;
+}
+
+/* Media Queries for responsiveness*/
+@media screen and (max-width: 1200px) {
+  .sign-up-card {
+    width: 95%;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .left-side {
+    max-width: 50%;
+  }
+  h1, p {
+    width: 95%;
+  }
+}
+@media screen and (max-width: 900px) {
+  .sign-up-card {
+    width: 87.5%;
+    flex-direction: column;
+  }
+  .sign-up-card > * {
+    width: 100%;
+  }
+  h1 {
+    width: 230px;
+    font-size: 1.6rem;
+    line-height: 2rem;
+  }
+  .left-side {
+    align-items: center;
+    max-width: initial;
+  }
+  .left-side p {
+    width: 325px;
+    font-size: 1rem;
+    text-align: center;
+  }
+  .right-side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .promo {
+    width: 87.5%;
+    text-align: center;
+  }
+  .sign-up-form {
+    width: 87.5%;
+  }
+  input, button {
+    width: 100%;
+  }
+  footer {
+    display: none;
+  }
+}
